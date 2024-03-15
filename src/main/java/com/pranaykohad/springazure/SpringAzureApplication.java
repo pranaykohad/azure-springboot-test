@@ -21,21 +21,21 @@ public class SpringAzureApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringAzureApplication.class, args);
 		System.out.println("Server started on port 8080 .....");
-		log.info("info: Server started...");
-		log.debug("debug: Server started...");
-		log.error("error: Server started...");
+		log.info("info: Server started in container...");
+		log.debug("debug: Server started in container...");
+		log.error("error: Server started in container...");
 	}
 
 	@GetMapping
 	public List<String> getFriends() {
 		List<String> list = new ArrayList<>();
-		log.info("info: {}", list);
-		log.debug("debug: {}", list);
-		log.error("error: {}", list);
 		list.add("Pranay Kohad");
 		list.add("Anuj Kumar");
 		list.add("Nilesh Kapale");
 		list.add("Bhushan Patil");
+		log.info("info: {}  in container", list);
+		log.debug("debug: {}  in container", list);
+		log.error("error: {} in container", list);
 		return list;
 	}
 
