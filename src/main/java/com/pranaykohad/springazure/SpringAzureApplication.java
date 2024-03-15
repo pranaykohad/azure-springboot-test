@@ -29,6 +29,9 @@ public class SpringAzureApplication {
 	@GetMapping
 	public List<String> getFriends() {
 		List<String> list = new ArrayList<>();
+		log.info("info: {}", list);
+		log.debug("debug: {}", list);
+		log.error("error: {}", list);
 		list.add("Pranay Kohad");
 		list.add("Anuj Kumar");
 		list.add("Nilesh Kapale");
