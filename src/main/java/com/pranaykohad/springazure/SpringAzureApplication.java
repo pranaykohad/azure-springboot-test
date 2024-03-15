@@ -26,7 +26,7 @@ public class SpringAzureApplication {
 		log.error("error: Server started...");
 	}
 
-	@GetMapping("friends")
+	@GetMapping
 	public List<String> getFriends() {
 		List<String> list = new ArrayList<>();
 		list.add("Pranay Kohad");
